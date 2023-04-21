@@ -11,7 +11,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("x", "<leader>p", "\"_dP") -- Paste without yanking 
 
-vim.keymap.set("i", "<C-c>", "<esc>") -- Cntrl-p is useless
+vim.keymap.set({"n", "i"}, "<C-c>", "<esc>") -- Cntrl-p is useless
 
 vim.keymap.set("i", "<C-H>", "<C-w>") -- Windows bind 
 vim.keymap.set("i", "<C-BS>", "<C-w>") -- wsl <Cntrl-BackSpace> bind

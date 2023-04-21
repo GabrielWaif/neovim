@@ -37,7 +37,10 @@ local plugins = {
 			{'neovim/nvim-lspconfig'},
 			{'williamboman/mason.nvim'},
 			{'williamboman/mason-lspconfig.nvim'},
-
+		 {
+			'nvim-lualine/lualine.nvim',
+			dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
+		},
 			-- Autocompletion
 			{'hrsh7th/nvim-cmp'},
 			{'hrsh7th/cmp-nvim-lsp'},
