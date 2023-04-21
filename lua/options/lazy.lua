@@ -12,6 +12,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.g.mapleader = " "; -- Set the <leader> in the remaps
+vim.g.maplocalleader = " "; -- Set the <leader> in the remaps
+
 local plugins = {
 	"rebelot/kanagawa.nvim", -- Theme
 	'nvim-tree/nvim-web-devicons', -- icons
@@ -21,14 +24,12 @@ local plugins = {
 		dependencies = { {'nvim-lua/plenary.nvim'} }
 	}, -- Quick open
 	'BurntSushi/ripgrep', -- used for search
-	-- Source controll
 	"mbbill/undotree", -- Shows all modifications
 	"tpope/vim-fugitive", -- Git support
 	'lewis6991/gitsigns.nvim', -- Git Annotations
-	-- Base features
-	{'nvim-treesitter/nvim-treesitter', 
-		run = ':TSUpdate'
-	},-- Theme support etc - nvim-treesitter
+	{'nvim-treesitter/nvim-treesitter',-- Theme support etc - nvim-treesitter
+		build = ':TSUpdate' -- Theme support etc - nvim-treesitter
+	},
 	{
 		'VonHeikemen/lsp-zero.nvim',
 		dependencies = {

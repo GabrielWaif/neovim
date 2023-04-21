@@ -1,14 +1,14 @@
 require 'nvim-treesitter.install'.compilers = { "clang" }
---require 'nvim-treesitter.install'.compilers = { "gcc" }
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { 
-	  "javascript", 
-	  "typescript", 
-	  "vim", 
-	  "java", 
-	  "lua", 
-	  "cpp", 
+
+  ensure_installed = {
+	  "javascript",
+	  "typescript",
+	  "vim",
+	  "java",
+	  "lua",
+	  "cpp",
 	  "sql",
 	  "python",
 	  "markdown"
