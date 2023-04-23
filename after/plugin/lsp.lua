@@ -1,12 +1,14 @@
 local lsp = require("lsp-zero")
 
-local system = "windows";
+local system = "linux";
 
 lsp.preset("recommended") -- Chooses the default settings for LSP
 
 lsp.ensure_installed({
   'tsserver',
   'rust_analyzer',
+  'jdtls',
+  'lua_ls'
 }) -- The LSP libraries that are automatically installed 
 
 local cmp = require('cmp')
