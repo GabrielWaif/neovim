@@ -11,6 +11,8 @@ lsp.ensure_installed({
   'lua_ls'
 }) -- The LSP libraries that are automatically installed 
 
+vim.keymap.set("n", "<leader>lr", ":w<CR>:LspRestart<CR>", {}); -- Lsp reload
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -85,7 +87,7 @@ if system == "windows" then
 			},
 			root_dir = java_root_finder,
 		}
-	) 
+	)
 else end
 
 lsp.setup()
