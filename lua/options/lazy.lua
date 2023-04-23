@@ -16,7 +16,15 @@ vim.g.mapleader = " "; -- Set the <leader> in the remaps
 vim.g.maplocalleader = " "; -- Set the <leader> in the remaps
 
 local plugins = {
-	"rebelot/kanagawa.nvim", -- Theme
+	{'rose-pine/neovim', name = 'rose-pine' },
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+		},
+	},
 	'nvim-tree/nvim-web-devicons', -- icons
 	"ThePrimeagen/harpoon",-- File navigation with marks
 	{
@@ -39,7 +47,7 @@ local plugins = {
 			{'williamboman/mason-lspconfig.nvim'},
 		 {
 			'nvim-lualine/lualine.nvim',
-			dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
+			dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true }
 		},
 			-- Autocompletion
 			{'hrsh7th/nvim-cmp'},

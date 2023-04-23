@@ -10,8 +10,8 @@ opt.relativenumber = true -- Mostra os numeros relativos a linha atual
 opt.tabstop = 4 -- 4 Espacos para o tab
 opt.softtabstop = 4 -- 4 Espacos para o tab
 opt.shiftwidth = 4 -- 4 Espacos para a identacao
---opt.autoindent = true -- Faz a identacao da proxima linha para ser igual a da linha atual
 
+-- Indentation
 opt.smartindent = true
 
 -- Quebra de linhas
@@ -45,14 +45,5 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- Configs em .vim
 vim.cmd 'set mouse=' --Desativa o mouse
 
---Destivados
-
 -- Copiar
 opt.clipboard:append("unnamedplus") -- Usa as copias padroes do sistema
-
--- vim.cmd 'set noshowmode'
-
--- backspace
--- opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
-
--- opt.iskeyword:append("-") -- considera a-a como uma palavra
